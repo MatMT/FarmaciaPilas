@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Forms;
+
 namespace FarmaciaPilas
 {
     internal class PilaCajas
@@ -38,20 +40,20 @@ namespace FarmaciaPilas
         }
 
         // imprime contenido de nodos almacenados en pila
-        public void VerContenido()
+        public void VerContenido(ListBox lstContenido)
         {
+            lstContenido.Items.Clear(); // limpiamos los ítems existentes del list box
             Caja aux; // permite hacer recorrido de nodos almacenados
             if (EstaVacia())
-                Console.WriteLine("\nPila no tiene nodos almacenados");
+                lstContenido.Items.Add("NO HAY CAJAS EN LA PILA");
             else
             {
                 // puntero auxiliar se fija en nodo al inicio de pila
                 aux = tope;
-                Console.Write("\nPila tiene {0} nodos: \n(tope) ", totnodos);
 
                 do
                 {
-                    Console.Write("-> {0} ", aux.Tipomedicina);
+                    lstContenido.Items.Add($"[{aux.Noserie}]. ( Tipo {aux.Tipomedicina} ) {aux.Unidades} unidades");
                     aux = aux.Sgte;
                 } while (aux != null);
             }
