@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 using System.Windows.Forms;
 
+// Analisis de Resultados - Guia 5 - PED104 Grupo 8L
+// Oscar Mateo Elias Lopez - EL232710
+// Javier Enrique Mejia Flores - MF232724
+
 namespace FarmaciaPilas
 {
     internal class PilaCajas
@@ -53,8 +57,8 @@ namespace FarmaciaPilas
 
                 do
                 {
-                    lstContenido.Items.Add($"[{aux.Noserie}]. ( Tipo {aux.Tipomedicina} ) {aux.Unidades} unidades");
-                    aux = aux.Sgte;
+                    lstContenido.Items.Add($"[{aux.noserie}]. ( Tipo {aux.tipomedicina} ) {aux.unidades} unidades");
+                    aux = aux.sgte;
                 } while (aux != null);
             }
         }
@@ -64,13 +68,13 @@ namespace FarmaciaPilas
         public void Push(Caja nuevo)
         {
             // Realiza copia de información del nodo recibido a un nuevo objeto local
-            Caja temp = new Caja(nuevo.Noserie, nuevo.Tipomedicina, nuevo.Unidades);
+            Caja temp = new Caja(nuevo.noserie, nuevo.tipomedicina, nuevo.unidades);
 
             // Se inserta este nuevo objeto en contenido de pila
             if (EstaVacia())
-                temp.Sgte = null;
+                temp.sgte = null;
             else
-                temp.Sgte = tope;
+                temp.sgte = tope;
 
             // nuevo nodo es ultimo ingresado en pila
             tope = temp;
@@ -88,8 +92,8 @@ namespace FarmaciaPilas
             {
                 aux = tope;
                 //tope se mueve al prox. nodo (si existe) en pila
-                tope = tope.Sgte;
-                aux.Sgte = null;
+                tope = tope.sgte;
+                aux.sgte = null;
                 totnodos--;
                 return aux; // retorna referencia a nodo extraido de pila
             }

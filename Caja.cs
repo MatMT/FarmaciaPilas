@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Analisis de Resultados - Guia 5 - PED104 Grupo 8L
+// Oscar Mateo Elias Lopez - EL232710
+// Javier Enrique Mejia Flores - MF232724
+
 namespace FarmaciaPilas
 {
     internal class Caja
     {
-        // Atributos
+        // Atributos públicos
         public int noserie;
         public string tipomedicina;
         public int unidades;
-        // puntero a otro objeto de esta misma clase
-        public Caja sgte;
+        public Caja sgte; // puntero a otro objeto de esta misma clase
 
         // Metodos:
         private void InicializarCampos()
@@ -38,59 +41,6 @@ namespace FarmaciaPilas
             this.noserie = noserie;
             this.tipomedicina = tipomedicina;
             this.unidades = unid;
-        }
-
-        // métodos de propiedad (get, set)
-        public int Noserie
-        {
-            get
-            {
-                return this.noserie;
-            }
-
-            set
-            {
-                this.noserie = value;
-            }
-        }
-
-        public string Tipomedicina
-        {
-            get
-            {
-                return this.tipomedicina;
-            }
-
-            set
-            {
-                this.tipomedicina = value;
-            }
-        }
-
-        public int Unidades
-        {
-            get
-            {
-                return this.unidades;
-            }
-
-            set
-            {
-                this.unidades= value;
-            }
-        }
-
-        public Caja Sgte
-        {
-            get
-            {
-                return this.sgte;
-            }
-
-            set 
-            { 
-                this.sgte = value; 
-            }
         }
     }
 }
