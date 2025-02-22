@@ -64,9 +64,9 @@
             // 
             // btnIngresarLote
             // 
-            this.btnIngresarLote.Location = new System.Drawing.Point(21, 111);
+            this.btnIngresarLote.Location = new System.Drawing.Point(15, 111);
             this.btnIngresarLote.Name = "btnIngresarLote";
-            this.btnIngresarLote.Size = new System.Drawing.Size(273, 23);
+            this.btnIngresarLote.Size = new System.Drawing.Size(279, 23);
             this.btnIngresarLote.TabIndex = 4;
             this.btnIngresarLote.Text = "Ingresar Lote";
             this.btnIngresarLote.Click += new System.EventHandler(this.btnIngresarLote_Click);
