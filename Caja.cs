@@ -9,11 +9,11 @@ namespace FarmaciaPilas
     internal class Caja
     {
         // Atributos
-        int noserie;
-        string tipomedicina;
-        int unidades;
+        public int noserie;
+        public string tipomedicina;
+        public int unidades;
         // puntero a otro objeto de esta misma clase
-        Caja sgte;
+        public Caja sgte;
 
         // Metodos:
         private void InicializarCampos()
